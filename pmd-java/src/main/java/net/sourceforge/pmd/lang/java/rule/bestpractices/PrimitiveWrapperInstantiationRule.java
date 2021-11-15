@@ -91,6 +91,8 @@ public class PrimitiveWrapperInstantiationRule extends AbstractJavaRule {
             } else {
                 addViolationWithMessage(data, node, messagePart + "(false)`, prefer `Boolean.FALSE`");
             }
+        } else if (node instanceof ASTAllocationExpression) {
+            addViolationWithMessage(data, node, messagePart + "`, prefer Boolean.valueOf");
         }
     }
 
