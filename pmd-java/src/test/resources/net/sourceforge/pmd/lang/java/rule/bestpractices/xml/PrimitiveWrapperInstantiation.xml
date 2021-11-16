@@ -169,6 +169,26 @@ public class Foo {
     </test-code>
 
     <test-code>
+        <description>Prefer Boolean.valueOf() over Boolean()</description>
+        <expected-problems>2</expected-problems>   
+        <expected-linenumbers>3,7</expected-linenumbers>          
+        <expected-messages>
+            <message>Do not use `new Boolean`, prefer Boolean.valueOf</message>
+            <message>Do not use `new Boolean`, prefer Boolean.valueOf</message>
+        </expected-messages>
+        <code><![CDATA[
+public class Foo {
+    public Boolean test(String s) {
+        return new Boolean(s);
+    }
+    public Boolean test(Boolean b) {
+        return new Boolean(b);
+    }
+}
+        ]]></code>
+    </test-code>
+
+    <test-code>
         <description>#1533 [java] BooleanInstantiation: ClassCastException with Annotation</description>
         <expected-problems>0</expected-problems>
         <code><![CDATA[
