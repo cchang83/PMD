@@ -171,7 +171,7 @@ public class Foo {
     <test-code>
         <description>Prefer Boolean.valueOf() over Boolean()</description>
         <expected-problems>2</expected-problems>   
-        <expected-linenumbers>3,7</expected-linenumbers>          
+        <expected-linenumbers>3,6</expected-linenumbers>          
         <expected-messages>
             <message>Do not use `new Boolean`, prefer Boolean.valueOf</message>
             <message>Do not use `new Boolean`, prefer Boolean.valueOf</message>
