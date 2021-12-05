@@ -70,6 +70,13 @@ public class PrimitiveWrapperInstantiationRule extends AbstractJavaRule {
         return data;
     }
 
+    /**
+     * Added code to resolve PMD #3595
+     * This method now checks arguments to catch improperly declared boolean variables and will issue a warning
+     * @param arguments
+     * @param node
+     * @param data
+     */
     private void checkArguments(ASTArguments arguments, JavaNode node, Object data) {
         if (arguments == null || arguments.size() != 1) {
             return;
