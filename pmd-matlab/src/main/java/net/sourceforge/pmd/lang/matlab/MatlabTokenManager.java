@@ -33,6 +33,21 @@ public class MatlabTokenManager implements TokenManager {
 
     @Override
     public Object getNextToken() {
+        /**
+        Object token = tokenManager.getNextToken();
+        // attempt to have it continue despite invalid character
+        if (token == '\_') {
+            continue;
+        }
+        // attempt to have it replace '_' with ' '
+        if (token =='\_') {
+            token = ' '
+        }
+        if (token == '\_') {
+            token = ''
+        }
+        return token;
+        */
         return tokenManager.getNextToken();
     }
 
